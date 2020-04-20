@@ -13,7 +13,6 @@ fixture`Marriages: Strong organic white bread flour`
   .page`https://flour.co.uk/view/strong-organic-white`;
 
 test("1 Kg is unavailable", async (t) => {
-  console.log(await Selector(".product-options .row:first-child").innerText);
   await t
     .expect(Selector(".product-options .row:first-child").innerText)
     .contains("OUT OF STOCK");
