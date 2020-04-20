@@ -14,7 +14,7 @@ jobs:
       with:
         args: "chrome tests"
     - uses: peter-evans/create-or-update-comment@v1
-      if: failure()
+      if: success()
       with:
         issue-number: 1
         body: |
