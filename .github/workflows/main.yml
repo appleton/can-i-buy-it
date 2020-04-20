@@ -13,3 +13,10 @@ jobs:
     - uses: DevExpress/testcafe-action@latest
       with:
         args: "chrome tests"
+    - uses: peter-evans/create-or-update-comment@v1
+      if: failure()
+      with:
+        issue-number: 1
+        body: |
+          Something is in stock!
+          [find out what](https://github.com/appleton/can-i-buy-it/actions/runs)
