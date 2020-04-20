@@ -20,7 +20,6 @@ test("1 Kg is unavailable", async (t) => {
 });
 
 test("6x 1 Kg is unavailable", async (t) => {
-  console.log(await Selector(".product-options .row:first-child").innerText);
   await t
     .expect(Selector(".product-options .row:nth-child(2)").innerText)
     .contains("OUT OF STOCK");
