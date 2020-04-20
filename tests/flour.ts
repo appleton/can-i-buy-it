@@ -9,6 +9,14 @@ test("10 Kg is unavailable", async (t) => {
     .contains("Apologies we are offline");
 });
 
+test.page(
+  "https://www.wessexmill.co.uk/acatalog/Strong-White-Bread-Flour-1.5kg-X002S.html"
+)("1.5 Kg is unavailable", async (t) => {
+  await t
+    .expect(Selector(".cart-button-placement").innerText)
+    .contains("Apologies we are offline");
+});
+
 fixture`Marriages: Strong organic white bread flour`
   .page`https://flour.co.uk/view/strong-organic-white`;
 
